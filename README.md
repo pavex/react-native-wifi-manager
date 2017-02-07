@@ -48,7 +48,7 @@ Set wifi status.
 ## Examples
 
 Check if wifi service is enabled.
-```
+```js
 WifiManager.isEnabled()
   .then((enabled) => {
     console.log('Wifi is enabled.');
@@ -60,7 +60,7 @@ WifiManager.isEnabled()
 
 Scan available wifi networks
 
-```
+```js
 WifiManager.startScan()
   .then((scanned) => {
      WifiManager.getScanResults()
