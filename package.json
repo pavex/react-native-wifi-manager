@@ -1,0 +1,15 @@
+{
+  "name": "pavex-react-native-wifi-manager",
+  "version": "0.0.2",
+  "description": "Simple wifi manager with service enabler, scanner and list getter",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com:Pavex/react-native-wifi-manager.git"
+  },
+  "author": "Pavel Mach·Ëek <pavex@ines.cz> (http://blog.ines.cz)",
+  "license": "MIT"
+}
