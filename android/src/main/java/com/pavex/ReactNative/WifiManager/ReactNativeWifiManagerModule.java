@@ -1,6 +1,6 @@
 /**
  * @author Pavex <pavex@ines.cz>
- * Many thanks for Ray Gl‰ske for base code of getWifiList and startScan
+ * Many thanks for Ray Gl√§ske for base code of getWifiList and startScan
  *   from (https://github.com/Haargeeel/react-native-wifi-checker)
  */
 package com.pavex.ReactNative.WifiManager;
@@ -44,11 +44,11 @@ public class ReactNativeWifiManagerModule extends ReactContextBaseJavaModule {
 
 
 	@ReactMethod
-	public void getWifiList(Promise promise) {
+	public void getScanResults(Promise promise) {
 		StringBuilder response = new StringBuilder();
 		WifiManager wifiManager = (WifiManager) getReactApplicationContext().getSystemService(Context.WIFI_SERVICE);
 
-		WritableArray wifiList = Arguments.createArray();
+		WritableArray scanResults = Arguments.createArray();
 		for (int i = 0; i < wifiManager.getScanResults().size(); i++) {
 			ScanResult result = wifiManager.getScanResults().get(i);
 			WritableMap map = Arguments.createMap();
@@ -57,16 +57,17 @@ public class ReactNativeWifiManagerModule extends ReactContextBaseJavaModule {
 			map.putString("capabilities", result.capabilities);
 			map.putInt("frequency", result.frequency);
 			map.putInt("level", WifiManager.calculateSignalLevel(result.level, 100));
+			map.putInt("rssi", result.level);
 			map.putDouble("timestamp", result.timestamp);
 //			map.putString("operatorFriendlyName", getString(result.operatorFriendlyName));
 //			map.putString("venueName", getString(result.venueName));
 //			map.putInt("centerFreq0", result.centerFreq0);
 //			map.putInt("centerFreq1", result.centerFreq1);
 //			map.putInt("channelWidth", result.channelWidth);
-			wifiList.pushMap(map);
+			scanResults.pushMap(map);
 		}
-		if (wifiList.size() > 0) {
-			promise.resolve(wifiList);
+		if (scanResults.size() > 0) {
+			promise.resolve(scanResults);
 		}
 		else {
 			promise.reject("No found wifi.");

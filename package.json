@@ -1,6 +1,6 @@
 {
   "name": "pavex-react-native-wifi-manager",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Simple wifi manager with service enabler, scanner and list getter",
   "main": "index.js",
   "scripts": {
