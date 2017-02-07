@@ -21,7 +21,7 @@ Returned the following list structure:
         {   
             "SSID": ssid,                 // SSID as string
             "BSSID": bssid,               // MAC address of WiFi router as string
-            "capabilities": capabilities, // Describes the authentication, key management, and encryption schemes supported by the access point.
+            "capabilities": capabilities, // Describes the authentication, etc.
             "frequency": frequency,       // frequency of the access point channel in MHz
             "rssi": rssi_level,           // raw RSSI value
             "level": signal_level         // RSSI value in percent
@@ -54,7 +54,7 @@ WifiManager.isEnabled()
     console.log('Wifi is enabled.');
   })
   .catch((error) => {
-    consle.warn(error);
+    console.warn(error);
   });
 ```
 
