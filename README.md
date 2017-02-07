@@ -17,6 +17,7 @@ npm install --save pavex-react-native-wifi-manager
 Retrieves a list of the available networks as an array of objects.
 Returned the following list structure:
 
+```js
     scanResult = [
         {   
             "SSID": ssid,                 // SSID as string
@@ -30,7 +31,7 @@ Returned the following list structure:
             ...
         }
     ]
-
+```
 
 #### `WifiManager.startScan();` 
 
