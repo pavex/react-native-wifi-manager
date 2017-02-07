@@ -23,7 +23,7 @@ Returned the following list structure:
             "BSSID": bssid,               // MAC address of WiFi router as string
             "capabilities": capabilities, // Describes the authentication, key management, and encryption schemes supported by the access point.
             "frequency": frequency,       // frequency of the access point channel in MHz
-            "rssi": signal_level,         // raw RSSI value
+            "rssi": rssi_level,           // raw RSSI value
             "level": signal_level         // RSSI value in percent
         },
         {
@@ -64,11 +64,11 @@ Scan available wifi networks
 WifiManager.startScan()
   .then((scanned) => {
      WifiManager.getScanResults()
-		   .then((scanResult) => {
-          console.log(scanResult);
+       .then((scanResult) => {
+         console.log(scanResult);
        })
        .catch((error) => {
-          console.warn(error);
+         console.warn(error);
        });
     })
     .catch((error) => {
