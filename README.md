@@ -18,23 +18,19 @@ Retrieves a list of the available networks as an array of objects.
 Returned the following list structure:
 
 ```js
-    scanResult = [
-        {   
-            "SSID": ssid,                 // SSID as string
-            "BSSID": bssid,               // MAC address of WiFi router as string
-            "capabilities": capabilities, // Describes the authentication, etc.
-            "frequency": frequency,       // frequency of the access point channel in MHz
-<<<<<<< HEAD
-            "rssi": rssi_level,           // Raw RSSI value
-=======
-            "rssi": rssi_level,           // raw RSSI value
->>>>>>> ea0cb851b04f558124d28250133f917a6587ca67
-            "level": signal_level         // RSSI value in percent
-        },
-        {
-            ...
-        }
-    ]
+scanResult = [
+    {   
+        "SSID": ssid,                 // SSID as string
+        "BSSID": bssid,               // MAC address of WiFi router as string
+        "capabilities": capabilities, // Describes the authentication, etc.
+        "frequency": frequency,       // frequency of the access point channel in MHz
+        "rssi": rssi_level,           // Raw RSSI value
+        "level": signal_level         // RSSI value in percent
+    },
+    {
+        ...
+    }
+];
 ```
 
 #### `WifiManager.startScan();` 
@@ -47,7 +43,7 @@ Retrieves the current wifi status and passes `true` or `false` over Promise.
 
 #### `WifiManager.setEnabled(enabled);` 
 
-Enable or diasble wifi service.
+Enable or disable wifi service.
 
 
 ## Examples
