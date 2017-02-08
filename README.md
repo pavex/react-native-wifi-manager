@@ -17,20 +17,25 @@ npm install --save pavex-react-native-wifi-manager
 Retrieves a list of the available networks as an array of objects.
 Returned the following list structure:
 
+```js
     scanResult = [
         {   
             "SSID": ssid,                 // SSID as string
             "BSSID": bssid,               // MAC address of WiFi router as string
-            "capabilities": capabilities, // Describes the authentication, key management, and encryption schemes supported by the access point.
+            "capabilities": capabilities, // Describes the authentication, etc.
             "frequency": frequency,       // frequency of the access point channel in MHz
+<<<<<<< HEAD
             "rssi": rssi_level,           // Raw RSSI value
+=======
+            "rssi": rssi_level,           // raw RSSI value
+>>>>>>> ea0cb851b04f558124d28250133f917a6587ca67
             "level": signal_level         // RSSI value in percent
         },
         {
             ...
         }
     ]
-
+```
 
 #### `WifiManager.startScan();` 
 
@@ -48,27 +53,27 @@ Enable or diasble wifi service.
 ## Examples
 
 Check if wifi service is enabled.
-```
+```js
 WifiManager.isEnabled()
   .then((enabled) => {
     console.log('Wifi is enabled.');
   })
   .catch((error) => {
-    consle.warn(error);
+    console.warn(error);
   });
 ```
 
 Scan available wifi networks
 
-```
+```js
 WifiManager.startScan()
   .then((scanned) => {
      WifiManager.getScanResults()
-		   .then((scanResult) => {
-          console.log(scanResult);
+       .then((scanResult) => {
+         console.log(scanResult);
        })
        .catch((error) => {
-          console.warn(error);
+         console.warn(error);
        });
     })
     .catch((error) => {
