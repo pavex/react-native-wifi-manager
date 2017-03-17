@@ -49,8 +49,7 @@ public class ReactNativeWifiManagerModule extends ReactContextBaseJavaModule {
 		WifiManager wifiManager = (WifiManager) getReactApplicationContext().getSystemService(Context.WIFI_SERVICE);
 
 		WritableArray scanResults = Arguments.createArray();
-		for (int i = 0; i < wifiManager.getScanResults().size(); i++) {
-			ScanResult result = wifiManager.getScanResults().get(i);
+		for (ScanResult result: wifiManager.getScanResults()) {
 			WritableMap map = Arguments.createMap();
 			map.putString("SSID", result.SSID);
 			map.putString("BSSID", result.BSSID);
