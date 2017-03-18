@@ -1,7 +1,7 @@
 {
   "name": "pavex-react-native-wifi-manager",
-  "version": "0.0.5",
-  "description": "Wifi manager oriented for scanning",
+  "version": "0.0.6",
+  "description": "Wifi manager methods for scanning",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
