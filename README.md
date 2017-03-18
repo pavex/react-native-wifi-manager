@@ -1,6 +1,6 @@
 # Wifi manager for React Native
 
-Simple wifi manager primary for scanning existing networks. This supports list with scan and wifi enable checking and enabler.
+Wifi manager oriented for scanning existing networks. This supports list with scan and wifi enable checking and enabler.
 This plugin now available for Android only.
 
 
