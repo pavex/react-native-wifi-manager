@@ -1,6 +1,6 @@
-{
+﻿{
   "name": "pavex-react-native-wifi-manager",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "Wifi manager methods for scanning",
   "main": "index.js",
   "scripts": {
